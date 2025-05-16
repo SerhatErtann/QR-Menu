@@ -1,60 +1,172 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>QR Menü</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-        .menu {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .menu-item {
-            margin-bottom: 20px;
-        }
-        .menu-item img {
-            max-width: 100%;
-            border-radius: 8px;
-        }
-        .menu-item h2 {
-            margin: 10px 0 5px;
-        }
-        .menu-item p {
-            margin: 0;
-        }
-    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>QR Menü</title>
+<style>
+  /* Reset ve genel ayarlar */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin: 0;
+  }
+
+  /* Kategori başlıkları */
+  .category {
+    margin-bottom: 40px;
+  }
+  .category h2 {
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: #0056b3;
+  }
+
+  /* Menü kartları düzeni */
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  /* Her bir ürün kartı */
+  .menu-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  .menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgb(0 0 0 / 0.3);
+  }
+
+  .menu-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .menu-item-content {
+    padding: 15px;
+  }
+
+  .menu-item-content h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+  }
+  .menu-item-content p {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .menu-item-content span {
+    font-weight: bold;
+    color: #007bff;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .menu-items {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
 </head>
 <body>
-    <div class="menu">
-        <h1>QR Menü</h1>
 
-        <div class="menu-item">
-            <img src="https://via.placeholder.com/500x300.png?text=Hamburger" alt="Hamburger">
-            <h2>Hamburger</h2>
-            <p>Lezzetli ev yapımı hamburger - 120₺</p>
-        </div>
+<header>
+  <h1>QR Menü</h1>
+  <p>Lezzetli yemeklerimizle sizi bekliyoruz!</p>
+</header>
 
-        <div class="menu-item">
-            <img src="https://via.placeholder.com/500x300.png?text=Pizza" alt="Pizza">
-            <h2>Pizza</h2>
-            <p>İnce hamur, bol malzeme - 150₺</p>
-        </div>
+<!-- Kategori: Burgerler -->
+<section class="category" id="burgers">
+  <h2>Burgerler</h2>
+  <div class="menu-items">
+    <article class="menu-item">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80" alt="Hamburger" />
+      <div class="menu-item-content">
+        <h3>Klasik Hamburger</h3>
+        <p>Lezzetli ev yapımı köfte, taze yeşillikler ve özel sos.</p>
+        <span>₺35</span>
+      </div>
+    </article>
+    <article class="menu-item">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80" alt="Cheeseburger" />
+      <div class="menu-item-content">
+        <h3>Cheeseburger</h3>
+        <p>Erimiş cheddar peyniri ve kıtır pastırma ile.</p>
+        <span>₺40</span>
+      </div>
+    </article>
+  </div>
+</section>
 
-        <div class="menu-item">
-            <img src="https://via.placeholder.com/500x300.png?text=Kahve" alt="Kahve">
-            <h2>Kahve</h2>
-            <p>Espresso bazlı içecekler - 50₺</p>
-        </div>
-    </div>
+<!-- Kategori: Pizzalar -->
+<section class="category" id="pizzas">
+  <h2>Pizzalar</h2>
+  <div class="menu-items">
+    <article class="menu-item">
+      <img src="https://images.unsplash.com/photo-1548365328-4b6d5c7b9187?auto=format&fit=crop&w=400&q=80" alt="Margarita Pizza" />
+      <div class="menu-item-content">
+        <h3>Margarita Pizza</h3>
+        <p>Domates sosu, mozzarella peyniri ve taze fesleğen.</p>
+        <span>₺45</span>
+      </div>
+    </article>
+    <article class="menu-item">
+      <img src="https://images.unsplash.com/photo-1601924638867-3ec8e7f14f6f?auto=format&fit=crop&w=400&q=80" alt="Pepperoni Pizza" />
+      <div class="menu-item-content">
+        <h3>Pepperoni Pizza</h3>
+        <p>Baharatlı pepperoni dilimleri ve mozzarella.</p>
+        <span>₺50</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Kategori: Tatlılar -->
+<section class="category" id="desserts">
+  <h2>Tatlılar</h2>
+  <div class="menu-items">
+    <article class="menu-item">
+      <img src="https://images.unsplash.com/photo-1505253210343-c5a3e06e1eae?auto=format&fit=crop&w=400&q=80" alt="Cheesecake" />
+      <div class="menu-item-content">
+        <h3>Cheesecake</h3>
+        <p>Kremamsı peynir dolgulu hafif tatlı.</p>
+        <span>₺30</span>
+      </div>
+    </article>
+    <article class="menu-item">
+      <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="Çikolatalı Kek" />
+      <div class="menu-item-content">
+        <h3>Çikolatalı Kek</h3>
+        <p>Yoğun çikolata tadı ve yumuşak dokusu.</p>
+        <span>₺25</span>
+      </div>
+    </article>
+  </div>
+</section>
+
 </body>
 </html>
