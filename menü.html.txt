@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Asya - Menü</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #222;
+    }
+    .menu-category {
+      margin-top: 30px;
+    }
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .menu-item span {
+      font-size: 16px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Café Asya</h1>
+    <h2>Menü</h2>
+
+    <div class="menu-category">
+      <h3>Sıcak İçecekler</h3>
+      <div class="menu-item"><span>Türk Kahvesi</span> <span>35₺</span></div>
+      <div class="menu-item"><span>Çay</span> <span>15₺</span></div>
+      <div class="menu-item"><span>Latte</span> <span>50₺</span></div>
+    </div>
+
+    <div class="menu-category">
+      <h3>Soğuk İçecekler</h3>
+      <div class="menu-item"><span>Limonata</span> <span>40₺</span></div>
+      <div class="menu-item"><span>Soğuk Kahve</span> <span>55₺</span></div>
+    </div>
+
+    <div class="menu-category">
+      <h3>Tatlılar</h3>
+      <div class="menu-item"><span>Cheesecake</span> <span>65₺</span></div>
+      <div class="menu-item"><span>Profiterol</span> <span>60₺</span></div>
+    </div>
+
+    <div class="footer">
+      QR ile açılan dijital menü örneğidir. Tasarım: Senin markan 🙂
+    </div>
+  </div>
+</body>
+</html>
