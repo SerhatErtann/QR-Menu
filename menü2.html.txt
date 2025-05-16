@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Café Asya - Menü</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #e0f7fa;
+      color: #333;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      text-align: center;
+      color: #00796b;
+    }
+    .menu-category {
+      margin-top: 30px;
+    }
+    .menu-category h3 {
+      color: #004d40;
+      border-bottom: 2px solid #004d40;
+      padding-bottom: 5px;
+    }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #ddd;
+      transition: background 0.3s ease;
+    }
+    .menu-item:hover {
+      background: #b2dfdb;
+    }
+    .menu-item img {
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      margin-right: 15px;
+      object-fit: cover;
+      border: 1px solid #00796b;
+    }
+    .item-info {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+    }
+    .item-name {
+      font-weight: 600;
+      font-size: 18px;
+    }
+    .item-price {
+      font-weight: 700;
+      font-size: 18px;
+      color: #00796b;
+      min-width: 50px;
+      text-align: right;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Café Asya</h1>
+    <h2>Menü</h2>
+
+    <div class="menu-category">
+      <h3>Sıcak İçecekler</h3>
+      <div class="menu-item">
+        <div class="item-info">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=50&q=60" alt="Türk Kahvesi" />
+          <span class="item-name">Türk Kahvesi</span>
+        </div>
+        <div class="item-price">35₺</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-info">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=50&q=60" alt="Çay" />
+          <span class="item-name">Çay</span>
+        </div>
+        <div class="item-price">15₺</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-info">
+          <img src="https://images.unsplash.com/photo-1521302080344-4a0a4d7f1662?auto=format&fit=crop&w=50&q=60" alt="Latte" />
+          <span class="item-name">Latte</span>
+        </div>
+        <div class="item-price">50₺</div>
+      </div>
+    </div>
+
+    <div class="menu-category">
+      <h3>Soğuk İçecekler</h3>
+      <div class="menu-item">
+        <div class="item-info">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=50&q=60" alt="Limonata" />
+          <span class="item-name">Limonata</span>
+        </div>
+        <div class="item-price">40₺</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-info">
+          <img src="https://images.unsplash.com/photo-1510626176961-4b0b8eb30415?auto=format&fit=crop&w=50&q=60" alt="Soğuk Kahve" />
+          <span class="item-name">Soğuk Kahve</span>
+        </div>
+        <div class="item-price">55₺</div>
+      </div>
+    </div>
+
+    <div class="menu-category">
+      <h3>Tatlılar</h3>
+      <div class="menu-item">
+        <div class="item-info">
+          <img src="https://images.unsplash.com/photo-1505253210343-6d52f431b7f6?auto=format&fit=crop&w=50&q=60" alt="Cheesecake" />
+          <span class="item-name">Cheesecake</span>
+        </div>
+        <div class="item-price">65₺</div>
+      </div>
+      <div class="menu-item">
+        <div class="item-info">
+          <img src="https://images.unsplash.com/photo-1521302080344-4a0a4d7f1662?auto=format&fit=crop&w=50&q=60" alt="Profiterol" />
+          <span class="item-name">Profiterol</span>
+        </div>
+        <div class="item-price">60₺</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      QR ile açılan dijital menü örneğidir. Tasarım: Senin markan 🙂
+    </div>
+  </div>
+</body>
+</html>
+
